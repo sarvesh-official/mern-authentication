@@ -12,9 +12,12 @@ const ForgotPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/auth/forgot-password", {
-        email,
-      })
+      .post(
+        "https://mern-authentication-backend-1tlttzcrk.vercel.app/auth/forgot-password",
+        {
+          email,
+        }
+      )
       .then((res) => {
         if (res.data.status == true) {
           alert("check your email for reset password link");

@@ -13,10 +13,13 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/auth/login", {
-        email,
-        password,
-      })
+      .post(
+        "https://mern-authentication-backend-1tlttzcrk.vercel.app/auth/login",
+        {
+          email,
+          password,
+        }
+      )
       .then((res) => {
         if (res.data.status == true) {
           navigate("/");

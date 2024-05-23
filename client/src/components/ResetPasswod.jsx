@@ -14,9 +14,13 @@ const ResetPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/auth/reset-password/" + token, {
-        password,
-      })
+      .post(
+        "https://mern-authentication-backend-1tlttzcrk.vercel.app/auth/reset-password/" +
+          token,
+        {
+          password,
+        }
+      )
       .then((res) => {
         console.log(res);
         if (res.data.status == true) {

@@ -8,13 +8,17 @@ const Dashboard = () => {
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
-    axios.get("http://localhost:5000/auth/verify").then((res) => {
-      if (res.data.status) {
-        console.log(res);
-      } else {
-        navigate("/");
-      }
-    });
+    axios
+      .get(
+        "https://mern-authentication-backend-1tlttzcrk.vercel.app/auth/verify"
+      )
+      .then((res) => {
+        if (res.data.status) {
+          console.log(res);
+        } else {
+          navigate("/");
+        }
+      });
   });
   return <div>Dashboard</div>;
 };
