@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://mern-authentication-gamma.vercel.app",
+    origin: ["https://mern-authentication-gamma.vercel.app"],
     credentials: true,
   })
 );
