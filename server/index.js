@@ -11,15 +11,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://mern-authentication-gamma.vercel.app",
-    ],
+    origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST",
     credentials: true,
   })
 );
-
 app.use(express.json());
 
 app.use(cookieParser());
