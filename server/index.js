@@ -14,6 +14,7 @@ app.use(
     origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST",
     credentials: true,
+    allowedHeaders: "Content-Type,Authorization,Set-Cookie",
   })
 );
 app.use(express.json());
