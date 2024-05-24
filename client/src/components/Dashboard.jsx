@@ -9,9 +9,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get(
-        "https://mern-authentication-backend-1tlttzcrk.vercel.app/auth/verify"
-      )
+      .get("https://mern-authentication-backend-psi.vercel.app/auth/verify")
       .then((res) => {
         if (res.data.status) {
           console.log(res);

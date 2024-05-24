@@ -12,16 +12,12 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://mern-authentication-backend-1tlttzcrk.vercel.app/auth/signup",
-        {
-          username,
-          email,
-          password,
-        }
-      )
+      .post("https://mern-authentication-backend-psi.vercel.app/auth/signup", {
+        username,
+        email,
+        password,
+      })
       .then((res) => {
-        console.log(res);
         if (res.data.status == true) {
           navigate("/login");
         }

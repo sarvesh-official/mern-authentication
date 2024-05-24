@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     axios
       .post(
-        "https://mern-authentication-backend-1tlttzcrk.vercel.app/auth/forgot-password",
+        "https://mern-authentication-backend-psi.vercel.app/auth/forgot-password",
         {
           email,
         }
