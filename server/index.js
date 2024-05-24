@@ -15,9 +15,8 @@ app.use(
       "http://localhost:3000",
       "https://mern-authentication-gamma.vercel.app",
     ],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    methods: "GET,HEAD,PUT,PATCH,POST",
     credentials: true,
-    allowedHeaders: "Content-Type,Authorization,Set-Cookie",
   })
 );
 
